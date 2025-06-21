@@ -1,0 +1,29 @@
+//
+//  module.modulemap
+//  XMFramework
+//
+//  Created by Xueming Wang on 2025/6/19.
+//
+
+//framework module XMFramework {
+////    umbrella header "Header"
+//
+//    // 定义伞头文件（包含所有公开头文件）
+//    umbrella header "XMFramework.h"
+//    // 导出所有内容
+//    export *
+//    // 包含子模块
+//    module * { export * }
+//}
+
+module XMFrameworkPrivate {
+//    umbrella header "Header"
+
+    // 定义伞头文件（包含所有公开头文件）
+    header "XMFramework.h"
+    header "XMFrameworkPrivate.h"
+    header "XMOCSDKPrivate.h"
+    // 导出所有内容
+    export *
+  
+}
