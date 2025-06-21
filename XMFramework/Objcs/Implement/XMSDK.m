@@ -6,7 +6,7 @@
 //
 
 #import "XMSDK.h"
-#import <XMFramework/XMFramework-Swift.h>
+//#import <XMFramework/XMFramework-Swift.h>
 #import "XMFramework-Swift.h"  // 自动生成的头文件
 @implementation XMSDK
 - (void)testXMSDK{
