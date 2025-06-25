@@ -7,6 +7,6 @@
 
 import UIKit
 
-@objc class XMSwiftSDKPrivate: NSObject {
+class XMSwiftSDKPrivate: NSObject {
   
 }

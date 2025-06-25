@@ -1,0 +1,6 @@
+framework module XMFramework {
+  umbrella header "XMFramework.h"
+  export *
+
+  module * { export * }
+}

@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9185D7632E0C3823008DE4A8 /* XMFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9185D7622E0C3823008DE4A8 /* XMFramework.podspec */; };
+		9185D7642E0C3823008DE4A8 /* XMFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9185D7622E0C3823008DE4A8 /* XMFramework.podspec */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		9185D7622E0C3823008DE4A8 /* XMFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XMFramework.podspec; sourceTree = "<group>"; };
 		91C348D22E06B78D00A66FA5 /* XMFrameworkTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMFrameworkTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E2EAD72E09003000E961A4 /* XMFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E755B62E0415F600EA0EAC /* XMFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -26,11 +33,14 @@
 				Objcs/module/XMFrameworkPrivate.h,
 				Objcs/module/XMOCSDKPrivate.h,
 				Objcs/module/XMOCSDKPrivate.m,
-				Objcs/module/XMTestBridgeHeader.h,
-				Objcs/module/XMTestBridgeHeader.m,
+				ServiceCenter.swift,
 				XMFramework.swift,
 				XMSwiftSDK.swift,
 				XMSwiftSDKPrivate.swift,
+			);
+			publicHeaders = (
+				Objcs/Header/Public/XMSDK.h,
+				Objcs/module/XMFramework.h,
 			);
 			target = 91C348D12E06B78D00A66FA5 /* XMFrameworkTwo */;
 		};
@@ -46,12 +56,27 @@
 			);
 			target = 91E755B52E0415F600EA0EAC /* XMFramework */;
 		};
+		91E2EAE82E09003100E961A4 /* Exceptions for "XMFrameworkDemo" folder in "XMFrameworkDemo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 91E2EAD62E09003000E961A4 /* XMFrameworkDemo */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		91C348D32E06B78D00A66FA5 /* XMFrameworkTwo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = XMFrameworkTwo;
+			sourceTree = "<group>";
+		};
+		91E2EAD82E09003000E961A4 /* XMFrameworkDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				91E2EAE82E09003100E961A4 /* Exceptions for "XMFrameworkDemo" folder in "XMFrameworkDemo" target */,
+			);
+			path = XMFrameworkDemo;
 			sourceTree = "<group>";
 		};
 		91E755B82E0415F600EA0EAC /* XMFramework */ = {
@@ -76,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91E2EAD42E09003000E961A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91E755B32E0415F600EA0EAC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,8 +121,10 @@
 		91E755AC2E0415F600EA0EAC = {
 			isa = PBXGroup;
 			children = (
+				9185D7622E0C3823008DE4A8 /* XMFramework.podspec */,
 				91E755B82E0415F600EA0EAC /* XMFramework */,
 				91C348D32E06B78D00A66FA5 /* XMFrameworkTwo */,
+				91E2EAD82E09003000E961A4 /* XMFrameworkDemo */,
 				91E755B72E0415F600EA0EAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +134,7 @@
 			children = (
 				91E755B62E0415F600EA0EAC /* XMFramework.framework */,
 				91C348D22E06B78D00A66FA5 /* XMFrameworkTwo.framework */,
+				91E2EAD72E09003000E961A4 /* XMFrameworkDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +182,28 @@
 			productReference = 91C348D22E06B78D00A66FA5 /* XMFrameworkTwo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		91E2EAD62E09003000E961A4 /* XMFrameworkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91E2EAE92E09003100E961A4 /* Build configuration list for PBXNativeTarget "XMFrameworkDemo" */;
+			buildPhases = (
+				91E2EAD32E09003000E961A4 /* Sources */,
+				91E2EAD42E09003000E961A4 /* Frameworks */,
+				91E2EAD52E09003000E961A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				91E2EAD82E09003000E961A4 /* XMFrameworkDemo */,
+			);
+			name = XMFrameworkDemo;
+			packageProductDependencies = (
+			);
+			productName = XMFrameworkDemo;
+			productReference = 91E2EAD72E09003000E961A4 /* XMFrameworkDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		91E755B52E0415F600EA0EAC /* XMFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91E755BF2E0415F600EA0EAC /* Build configuration list for PBXNativeTarget "XMFramework" */;
@@ -183,6 +240,9 @@
 					91C348D12E06B78D00A66FA5 = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					91E2EAD62E09003000E961A4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					91E755B52E0415F600EA0EAC = {
 						CreatedOnToolsVersion = 16.4;
 						LastSwiftMigration = 1640;
@@ -205,12 +265,21 @@
 			targets = (
 				91E755B52E0415F600EA0EAC /* XMFramework */,
 				91C348D12E06B78D00A66FA5 /* XMFrameworkTwo */,
+				91E2EAD62E09003000E961A4 /* XMFrameworkDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		91C348D02E06B78D00A66FA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9185D7642E0C3823008DE4A8 /* XMFramework.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E2EAD52E09003000E961A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9185D7632E0C3823008DE4A8 /* XMFramework.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +298,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		91C348CE2E06B78D00A66FA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E2EAD32E09003000E961A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,7 +352,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.XMFrameworkTwo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/XMFramework/Objcs/module\"";
@@ -313,12 +390,76 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.XMFrameworkTwo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/XMFramework/Objcs/module\"";
 				SWIFT_INSTALL_MODULE = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91E2EAEA2E09003100E961A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZG88AN428;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XMFrameworkDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XMFrameworkDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMFrameworkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91E2EAEB2E09003100E961A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZG88AN428;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XMFrameworkDemo",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XMFrameworkDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMFrameworkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -556,6 +697,15 @@
 			buildConfigurations = (
 				91C348D92E06B78D00A66FA5 /* Debug */,
 				91C348DA2E06B78D00A66FA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91E2EAE92E09003100E961A4 /* Build configuration list for PBXNativeTarget "XMFrameworkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91E2EAEA2E09003100E961A4 /* Debug */,
+				91E2EAEB2E09003100E961A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
