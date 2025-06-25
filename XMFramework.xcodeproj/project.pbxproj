@@ -6,7 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9185D7632E0C3823008DE4A8 /* XMFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9185D7622E0C3823008DE4A8 /* XMFramework.podspec */; };
+		9185D7642E0C3823008DE4A8 /* XMFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9185D7622E0C3823008DE4A8 /* XMFramework.podspec */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		9185D7622E0C3823008DE4A8 /* XMFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XMFramework.podspec; sourceTree = "<group>"; };
 		91C348D22E06B78D00A66FA5 /* XMFrameworkTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMFrameworkTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E2EAD72E09003000E961A4 /* XMFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E755B62E0415F600EA0EAC /* XMFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,7 @@
 		91E755AC2E0415F600EA0EAC = {
 			isa = PBXGroup;
 			children = (
+				9185D7622E0C3823008DE4A8 /* XMFramework.podspec */,
 				91E755B82E0415F600EA0EAC /* XMFramework */,
 				91C348D32E06B78D00A66FA5 /* XMFrameworkTwo */,
 				91E2EAD82E09003000E961A4 /* XMFrameworkDemo */,
@@ -268,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9185D7642E0C3823008DE4A8 /* XMFramework.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9185D7632E0C3823008DE4A8 /* XMFramework.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
